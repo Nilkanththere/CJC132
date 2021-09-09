@@ -1,0 +1,38 @@
+
+<div class="container">
+    <table class="table" border="1" >
+      <tbody  >
+          <tr class="table-dark"><td>Employee Id</td>
+              <td>Employee Name</td>
+              <td>Gender</td>
+              <td>Employee Email</td>
+             
+              <td>Show Details</td>
+              <td>Edit</td>
+              <td>Delete</td>
+              </tr>
+        <tr *ngFor="let emp of employeelist" [ngStyle]="getbackground(emp)">
+          <td>{{emp.id}}</td>
+          <td>{{emp.empname|custom:emp.gender}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.email}}</td>
+
+          <td><a [routerLink]="['employee-details',emp.id]">show details</a></td>
+          <td><a class="btn">
+             <i class="fa fa-edit" [routerLink]="['update']" [state]="emp"></i>
+             <!-- <i class="fa fa-edit" (click)="editemployee(emp)"></i> -->
+                      
+          </a>
+          </td>
+          <td><a class="btn">
+            <i class="fa fa-trash " (click)="deleteemployee(emp.id)"></i>
+          </a>                       
+          </td>                                  
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-success" (click)="getback()">Go Back</button>
+  <a routerLink="/login/header/employee">Go back</a>
+  <router-outlet></router-outlet>
+ 

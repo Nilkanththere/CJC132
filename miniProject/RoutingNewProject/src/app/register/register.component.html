@@ -1,0 +1,82 @@
+
+  <body>
+    <div class="bg-image">
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="max-width:500px;margin:auto">
+      <h2>Register Form</h2>
+
+      
+    
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" formControlName="empname" placeholder="enter name">
+      </div>
+    
+      <div><i class="fa fa-user icon"></i>
+       
+ 
+          <input type="radio" value="male" formControlName="gender"name="gender">Male
+          <input type="radio" value="female"formControlName="gender" name="gender">Female
+          <input type="radio"value="other" formControlName="gender"name="gender">Other
+
+      </div>
+
+
+
+
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" formControlName="email"placeholder="enter email">
+        <span *ngIf="registerForm.controls['email'].hasError('email')">'@'mail.xyz</span>
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" formControlName="mobileno" placeholder="enter mbole no">
+ <span *ngIf="registerForm.controls['mobileno'].hasError('minlength')">Mini.10 digits required</span>
+
+<span *ngIf="registerForm.controls['mobileno'].hasError('maxlength')">Maxi.10 digits required</span>
+
+
+
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text"formControlName="designation" placeholder="enter Designation">
+      </div>
+
+
+
+
+
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" formControlName="userName" placeholder="enter username">
+      <span *ngIf="registerForm.controls['userName'].hasError('maxlength')">Not morethan 5 charactor </span>
+
+    </div>
+  
+
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="password" formControlName="password" placeholder="enter password">
+        <span *ngIf="registerForm.controls['password'].hasError('minlength')">Mini.3 charactor required</span>
+        <span *ngIf="registerForm.controls['password'].hasError('maxlength')">Maxi.10 charactor required</span>
+        <span *ngIf="registerForm.controls['password'].hasError('pattern')">At least One UpperCase One LowerCase One Number one Symbol one Upper or Lower Case Ex.Abc123@</span>
+      </div>
+    
+     
+      <button type="submit" class="btn">Register</button>
+
+
+      <button type="button" class="btn btn-danger" style="text-align: center;" routerLink="/login">back</button>
+
+    
+    </form>
+    </div>
+  </body>
+    
+
+
+
+ 

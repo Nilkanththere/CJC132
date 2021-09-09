@@ -1,0 +1,77 @@
+
+<blockquote class="blockquote">
+    <h1 style=" color: red; text-align: center;">Login Here..!!!</h1>
+  </blockquote>
+  
+
+
+
+
+<body>
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <div class="row">
+        <h2  style="text-align:center" >Login with Social Media or Manually</h2>
+        <div class="vl">
+          <span class="vl-innertext">or</span>
+        </div>
+  
+        <div class="col">
+          <a href=" https://www.facebook.com/ "   class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+           </a>
+          <a href="https://twitter.com/login?lang=en" class="twitter btn">
+            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+          </a>
+          <a href="https://accounts.google.com/signin/v2/identifier?hl=en&flowName=GlifWebSignIn&flowEntry=AddSession" class="google btn"><i class="fa fa-google fa-fw">
+            </i> Login with Google+
+          </a>
+        </div>
+  
+        <div class="col">
+          <div class="hide-md-lg">
+            <p>Or sign in manually:</p>
+          </div>
+  
+          <input type="text" placeholder="Username" required formControlName="userName">
+          <span *ngIf="loginForm.controls['userName'].hasError('minlength')"style=" color: red;">Mini.3 charactor required</span>
+
+         
+
+          <input type="password"  placeholder="Password" required formControlName="password">
+
+          <span *ngIf="loginForm.controls['password'].hasError('minlength')"style="color:red;">Min.3 charactor required</span>
+          <span *ngIf="loginForm.controls['password'].hasError('maxlength')"style=" color: red;">Maxi.10 charactor required</span>
+          <div style="color:red; text-align: center;">{{abc}}</div>
+          <input type="submit" value="Login">
+        </div>
+        
+       
+      </div>
+    </form>
+  </div>
+  
+  <div class="bottom-container">
+    <div class="row">
+      <div class="col">
+        <a href="#" style="color:white" class="btn"  routerLink="register">Click Here to Register</a>
+      </div>
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+
+
+
+
+
+
+
+
+
+
+

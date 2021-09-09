@@ -1,0 +1,56 @@
+
+
+<body>
+    <h1 style="font-weight: bolder; font-size: x-large; color: darkred;">Angular Project</h1>
+  
+   
+
+  <ul>
+    <li> <a class="nav-item nav-link active" routerLink="dashboard" style="color: black;font-weight: bolder; font-size: x-large;">DashBoard <span class="sr-only">(current)</span></a></li>
+    <li> <a class="nav-item nav-link active" routerLink="company"  style="color: black;font-weight: bolder; font-size: x-large;">Company</a></li>
+    <li> <a class="nav-item nav-link active" routerLink="employee" style="color: black;font-weight: bolder; font-size: x-large;">Employee</a></li>
+    <li><a class="nav-item nav-link active" routerLink="contact-us" style="color: black;font-weight: bolder; font-size: x-large;">Contact-us</a></li>
+    <li> <a class="nav-item nav-link active" routerLink="about-us" style="color: black;font-weight: bolder; font-size: x-large;">About-us</a></li>
+
+    <!-- <li>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  </li> -->
+
+
+
+  <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-success"  type="submit">Search</button>
+    <button class="btn btn-success"  routerLink="/login">Log Out </button>
+  </form>
+
+
+
+
+
+
+
+
+  <!-- <li>
+    <form class="form-inline">
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
+    
+    </form>
+  </li>
+
+ <li>
+  <form class="form-inline">
+  <button class="btn btn-success btn-lg float-right" routerLink="/login">Log Out </button>
+</form>
+</li>  -->
+
+  </ul>
+</body>
+
+
+
+  
+  
+    <router-outlet></router-outlet>
