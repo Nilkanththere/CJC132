@@ -1,0 +1,48 @@
+ul {
+
+     text-align: center;
+
+    list-style-type:none;
+    margin: 100;
+    padding: 10px;
+    overflow: hidden;
+    background-color: cornflowerblue;
+  }
+  
+  li {
+   
+    float:left;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  }
+
+  h1{
+    text-align:center ;
+  }
+
+  body{
+ 
+    background-color: sandybrown;
+    
+
+
+  }
+  button
+  {
+
+    text-align: center;
+    height: 40px;
+    width: 200px;
+  }
+ 
+  .nav-item 
+  {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+  }

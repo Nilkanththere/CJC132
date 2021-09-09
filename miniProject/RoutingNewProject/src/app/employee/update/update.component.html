@@ -1,0 +1,73 @@
+<p>update works!</p>
+
+
+<body>
+    <div class="bg-image">
+    <form [formGroup]=" updateForm" (ngSubmit)="onSubmit()" style="max-width:500px;margin:auto ">
+      <h2>Update</h2>
+
+      
+    
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" formControlName="empname" placeholder="enter name">
+      </div>
+
+      <div><i class="fa fa-user icon"></i>
+       
+ 
+        <input type="radio" value="male" formControlName="gender"name="gender">Male
+          <input type="radio" value="female"formControlName="gender" name="gender">Female
+          <input type="radio"value="other" formControlName="gender"name="gender">Other
+    </div>
+
+    
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" formControlName="email"placeholder="enter email">
+        
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" formControlName="mobileno" placeholder="enter mbole no">
+ 
+
+
+
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text"formControlName="designation" placeholder="enter Designation">
+      </div>
+
+
+
+
+
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" formControlName="userName" placeholder="enter username">
+     
+
+    </div>
+  
+
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="password" formControlName="password" placeholder="enter password">
+       
+      </div>
+    
+     
+      <button type="submit" class="btn">Update</button>
+
+
+      <button type="button" class="btn btn-danger" style="text-align: center;" routerLink="login/header">back</button>
+
+    
+    </form>
+    </div>
+  </body>
+    
